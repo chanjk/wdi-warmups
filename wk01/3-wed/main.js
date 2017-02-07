@@ -16,11 +16,11 @@ var thatArray = ["Facebook Platform","Erlang Enthusiasts","Ex-Girlfriends",
 "Camp Counselors","Nature Blogs","World of Warcraft","Models","Family Guy Enthusiasts","The Army","Cheap Vodka","Tech Incubators","Star Trek Conventions","Presentation Tools","Small Businesses","Beer","Nightclub Lines","Semi-Active Volcanoes", "Sanctimonial Artifacts","Traveling Abroad","Your Mom","Billionaires","Happy Hours","Ugg Boots","The Homeless","Blacking Out","Red Wine","Happy Families","Social Outcasts",
 "Surgeons","Pounding Jagger Bombs","Textbooks","Coffee Shops","Baristas"];
 
-function randInt(from, to) {
-  return Math.round(Math.random() * (to - from) + from);
+function randInt(from, until) {
+  return Math.floor(Math.random() * (until - from) + from);
 }
 
-var randFromThisArray = thisArray[randInt(0, thisArray.length - 1)];
-var randFromThatArray = thatArray[randInt(0, thatArray.length - 1)];
+var randFromThisArray = thisArray[randInt(0, thisArray.length)];
+var randFromThatArray = thatArray[randInt(0, thatArray.length)];
 
 console.log(randFromThisArray + ' ' + randFromThatArray);
