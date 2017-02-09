@@ -8,12 +8,12 @@ var grannyTalk = function(question) {
   var fromYear = 1930;
   var toYear = 1950;
 
-  return 'NO, NOT SINCE ' + Math.floor(Math.random() * (toYear - fromYear + 1) + fromYear);
+  return 'NO, NOT SINCE ' + randInt(fromYear, toYear + 1);
 }
 
 var grandpaTalk = function(question) {
   var getRandomElementAndSpliceArray = function(array) {
-    var randIndex = Math.floor(Math.random() * array.length);
+    var randIndex = randInt(0, array.length);
     var elem = array[randIndex];
     array.splice(randIndex, 1);
     return elem;
@@ -45,6 +45,10 @@ var grandpaTalk = function(question) {
   }).join('');
 
   return gibberish;
+}
+
+var randInt = function(from, until) {
+  return Math.floor(Math.random() * (until - from) + from);
 }
 
 grannyQuestion1 = 'How are you grandma?';
