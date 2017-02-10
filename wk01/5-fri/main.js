@@ -19,11 +19,11 @@ var grandpaTalk = function(question) {
     return elem;
   }
 
-  var findVowels = function(strArray) {
+  var findVowels = function(charArray) {
     var vowels = [];
 
-    for (var i = 0; i < strArray.length; i++) {
-      var char = strArray[i].toLowerCase();
+    for (var i = 0; i < charArray.length; i++) {
+      var char = charArray[i].toLowerCase();
       if (vowelSet.includes(char)) {
         vowels.push(char);
       }
@@ -32,10 +32,10 @@ var grandpaTalk = function(question) {
   }
 
   var vowelSet = ['a', 'e', 'i', 'o', 'u'];
-  var responseStringArray = grannyTalk(question).split('');
-  var currentVowels = findVowels(responseStringArray);
+  var responseCharArray = grannyTalk(question).split('');
+  var currentVowels = findVowels(responseCharArray);
 
-  var gibberish = responseStringArray.map(function(letter) {
+  var gibberish = responseCharArray.map(function(letter) {
     if (vowelSet.includes(letter)) {
       letter = getRandomElementAndSpliceArray(currentVowels);
     } else if (vowelSet.includes(letter.toLowerCase())) {
