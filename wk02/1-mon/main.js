@@ -46,5 +46,5 @@ var fishWinnings = function() {
     });
   };
 
-  console.log('Fish\'s bet winnings: ' + (sum(winnings(bob)) + sum(winnings(jimbo))));
+  console.log('Fish\'s bet winnings: ' + (sum(winnings(bob)) + sum(winnings(jimbo))) + ' dollars');
 };
