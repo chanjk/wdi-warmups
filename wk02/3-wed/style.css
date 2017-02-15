@@ -1,0 +1,23 @@
+div {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10% 0 0 2em;
+}
+
+h1 {
+  font-family: helvetica, sans-serif;
+}
+
+p {
+  font-family: "Franklin Gothic", sans-serif;
+  font-size: 3em;
+}
+
+img {
+  width: 40%;
+}
+
+#winner {
+  font-size: 3em;
+  font-weight: bold;
+}
