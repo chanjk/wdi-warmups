@@ -12,18 +12,18 @@ loop do
         w[0] = w[0].downcase
       end
       # binding.pry
-      counter = 0
+      toUpcase = true
       w[1..-1].length.times do |i|
         if w[i + 1].match(/[a-zA-Z && [^aeiouAEIOU]]/)
-          if counter == 0
+          if toUpcase
             w[i + 1] = w[i + 1].upcase
           else
             w[i + 1] = w[i + 1].downcase
           end
 
-          counter = (counter + 1) % 2
+          toUpcase = !toUpcase
         elsif w[i + 1].match(/[0-9]/)
-          counter = 1
+          toUpcase = false
         end
       end
 
