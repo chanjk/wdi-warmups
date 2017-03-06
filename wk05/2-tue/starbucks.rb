@@ -14,7 +14,7 @@ class Coffee
     @size = size
     @order_name = misspell(order_name)
     @options = options
-    @ready_time = Time.now + rand(2..5) * 60
+    @ready_time = Time.now + rand(120..300)
     @collected = false
   end
 
