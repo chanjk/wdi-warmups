@@ -2,13 +2,24 @@ require 'pry'
 
 class Dice
   def self.roll(num_rolls = 1)
-    rolls = [*1..num_rolls].collect { rand(1..6) }
+    new([*1..num_rolls].collect { rand(1..6) })
+  end
 
-    if rolls.length > 1 then puts rolls.collect { |r| stringify(r) } else puts stringify(rolls.first) end
+  def initialize(rolls)
+    @rolls = rolls
+    puts self
+  end
+
+  def sum
+    [@rolls, @rolls.reduce(:+)]
+  end
+
+  def to_s
+    "#{@rolls.collect { |r| stringify(r) }.join("\n")}"
   end
 
   private
-  def self.stringify(roll)
+  def stringify(roll)
     "#{roll}\n" +
     "---------\n" +
     "| #{mark_if(roll > 1)}   #{mark_if(roll > 3)} |\n" +
@@ -18,14 +29,8 @@ class Dice
   end
 
   private
-  def self.mark_if(condition)
+  def mark_if(condition)
     if condition then "*" else " " end
-  end
-end
-
-class Array
-  def sum
-    [self, self.reduce(:+)]
   end
 end
 
