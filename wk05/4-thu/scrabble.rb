@@ -46,15 +46,15 @@ class Scrabble
     sum
   end
 
-  private
   def self.double(value)
     value * 2
   end
 
-  private
   def self.triple(value)
     value * 3
   end
+
+  private_class_method :double, :triple
 end
 
 binding.pry
