@@ -11,6 +11,8 @@ var $digital = $('.digital');
 var markDistanceFromCenter = $clock.height() / 2.0;
 
 var prefixString = function(str, paddedLength, prefixChar) {
+  str = str.toString();
+
   if (str.length < paddedLength) {
      while (paddedLength !== str.length) {
        str = prefixChar + str;
