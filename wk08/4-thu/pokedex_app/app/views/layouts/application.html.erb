@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokedex</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <a href="/">
+        <img src="http://cdn.bulbagarden.net/upload/thumb/4/4b/Pokédex_logo.png/250px-Pokédex_logo.png" alt="">
+      </a>
+    </header>
+    <%= yield %>
+  </body>
+</html>

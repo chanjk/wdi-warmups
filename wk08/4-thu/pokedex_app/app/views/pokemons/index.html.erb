@@ -1,0 +1,11 @@
+<div class="pokemons">
+  <% @pokemons.each do |pokemon| %>
+  <div class="entry">
+    <div class="nickname"><%= pokemon.nickname %></div>
+    <div class="species">Species: <%= pokemon.species %></div>
+    <div class="level">Level: <%= pokemon.level %></div>
+  </div>
+  <% end %>
+</div>
+
+<a href="/pokemons/new">Add a new Pokemon</a>

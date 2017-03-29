@@ -1,0 +1,11 @@
+<h1>Add a new Pokemon</h1>
+
+<%= form_tag '/pokemons', method: 'post' do %>
+<label for="">Species</label>
+<input type="text" name="species">
+<label for="">Nickname</label>
+<input type="text" name="nickname">
+<label for="">Level</label>
+<input type="number" name="level">
+<button>Add Pokemon</button>
+<% end %>
