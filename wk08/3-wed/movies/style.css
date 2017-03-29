@@ -1,0 +1,11 @@
+.card {
+  box-sizing: border-box;
+  float: left;
+  width: 23%;
+  height: 600px;
+  margin: 1%;
+}
+
+img {
+  max-width: 100%;
+}
