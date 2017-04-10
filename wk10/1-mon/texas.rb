@@ -24,6 +24,10 @@ class Deck
   end
 end
 
+def show(hand)
+  hand.join(", ")
+end
+
 num_players = 0
 
 loop do
@@ -44,14 +48,14 @@ flop = deck.deal && deck.deal(3)
 turn = deck.deal && deck.deal(1)
 river = deck.deal && deck.deal(1)
 
-puts "Your hand: #{my_hand.join(", ")}"
+puts "Your hand: #{show(my_hand)}"
 
-cpu_hands.each_with_index do |cpu, i|
-  puts "CPU #{i + 1} hand: #{cpu.join(", ")}"
+cpu_hands.each_with_index do |cpu_hand, i|
+  puts "CPU #{i + 1} hand: #{show(cpu_hand)}"
 end
 
-puts "Flop: #{flop.join(", ")}"
-puts "Turn: #{turn.join(", ")}"
-puts "River: #{river.join(", ")}"
+puts "Flop: #{show(flop)}"
+puts "Turn: #{show(turn)}"
+puts "River: #{show(river)}"
 
 # binding.pry
