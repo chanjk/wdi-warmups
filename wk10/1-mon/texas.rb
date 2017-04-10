@@ -40,14 +40,9 @@ deck = Deck.new
 my_hand = deck.deal(2)
 cpu_hands = Array.new(num_players - 1).map { deck.deal(2) }
 
-deck.deal
-flop = deck.deal(3)
-
-deck.deal
-turn = deck.deal(1)
-
-deck.deal
-river = deck.deal(1)
+flop = deck.deal && deck.deal(3)
+turn = deck.deal && deck.deal(1)
+river = deck.deal && deck.deal(1)
 
 puts "Your hand: #{my_hand.join(", ")}"
 
