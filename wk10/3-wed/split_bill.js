@@ -12,7 +12,7 @@ var splitTheBill = function(group) {
   var avgAmount = average(amounts);
 
   return members.reduce(function(acc, m) {
-    acc[m] = group[m] - avgAmount;
+    acc[m] = Math.round((group[m] - avgAmount) * 100) / 100;
     return acc;
   }, {});
 };
