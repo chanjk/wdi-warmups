@@ -1,0 +1,13 @@
+main, aside {
+  display: inline-block;
+}
+
+main {
+  width: 40%;
+  vertical-align: top;
+}
+
+aside img {
+  vertical-align: middle;
+  margin-right: 1em;
+}
