@@ -5,7 +5,7 @@ var months = [
 
 var datesWithOrdinals = (function() {
   var suffixes = ['st', 'nd', 'rd', 'th'];
-  var res = {}, lastDigit;
+  var res = {};
 
   for (var i = 1; i <= 31; i++) {
     if (i === 11 || i === 12 || i === 13) {
