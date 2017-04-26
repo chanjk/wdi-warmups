@@ -23,7 +23,7 @@ class Allergies
     allergies = []
 
     @@all_allergies.each do |allergy, value|
-      if score >= value
+      if score >= value # could also use score & value > 0, without reducing score
         allergies.unshift(allergy)
         score -= value
       end
