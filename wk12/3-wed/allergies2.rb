@@ -5,7 +5,6 @@ class Allergies
                       .map.with_index { |a, i| [a, 2 ** i] }.to_h
 
   def initialize(score)
-    @score = score
     @allergies = @@all_allergies.select { |a, v| score & v > 0 }.keys
   end
 
